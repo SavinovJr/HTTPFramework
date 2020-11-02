@@ -17,6 +17,7 @@
 		AD7F1A772545AA7100FD12B0 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F1A762545AA7100FD12B0 /* HTTPStatus.swift */; };
 		AD7F1A7B2545ABD600FD12B0 /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F1A7A2545ABD600FD12B0 /* HTTPResult.swift */; };
 		AD7F1A7F2545AC2400FD12B0 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F1A7E2545AC2400FD12B0 /* HTTPError.swift */; };
+		ADFF720E2550027E00E78549 /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF720D2550027E00E78549 /* HTTPBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		AD7F1A762545AA7100FD12B0 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		AD7F1A7A2545ABD600FD12B0 /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
 		AD7F1A7E2545AC2400FD12B0 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		ADFF720D2550027E00E78549 /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
 		BF286CA8C5E32ACBCFFAF266 /* libPods-HTTPFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTTPFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				AD7F1A722545A9F400FD12B0 /* HTTPResponse.swift */,
 				AD7F1A7A2545ABD600FD12B0 /* HTTPResult.swift */,
 				AD7F1A7E2545AC2400FD12B0 /* HTTPError.swift */,
+				ADFF720D2550027E00E78549 /* HTTPBody.swift */,
 			);
 			path = HTTPFramework;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				AD7F1A6F2545A88400FD12B0 /* HTTPRequest.swift in Sources */,
 				AD7F1A7F2545AC2400FD12B0 /* HTTPError.swift in Sources */,
 				AD7F1A772545AA7100FD12B0 /* HTTPStatus.swift in Sources */,
+				ADFF720E2550027E00E78549 /* HTTPBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
