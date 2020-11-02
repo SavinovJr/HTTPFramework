@@ -10,7 +10,13 @@ import Foundation
 public struct HTTPResponse {
     private let response: HTTPURLResponse
     public let request: HTTPRequest
-    public let body: HTTPBody = EmptyBody()
+    public let body: Data?
+
+    init(response: HTTPURLResponse, request: HTTPRequest, body: Data?) {
+        self.response = response
+        self.request = request
+        self.body = body
+    }
 }
 
 public extension HTTPResponse {
