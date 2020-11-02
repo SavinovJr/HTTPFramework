@@ -41,4 +41,8 @@ public extension HTTPRequest {
             urlComponents.path = newValue
         }
     }
+
+    var url: URL? {
+        urlComponents.url
+    }
 }

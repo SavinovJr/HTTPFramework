@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61C6A80E0C9A5F5C2756D592 /* libPods-HTTPFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF286CA8C5E32ACBCFFAF266 /* libPods-HTTPFramework.a */; };
+		AD1FAF2E25504AFD0007D814 /* HTTPLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1FAF2D25504AFD0007D814 /* HTTPLoadingTests.swift */; };
 		AD7F1A582545A7FD00FD12B0 /* HTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7F1A4E2545A7FC00FD12B0 /* HTTPFramework.framework */; };
 		AD7F1A5F2545A7FD00FD12B0 /* HTTPFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7F1A512545A7FC00FD12B0 /* HTTPFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD7F1A6B2545A84700FD12B0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F1A6A2545A84700FD12B0 /* HTTPMethod.swift */; };
@@ -24,6 +25,7 @@
 		ADFF72242550237D00E78549 /* HTTPResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF72232550237D00E78549 /* HTTPResultTests.swift */; };
 		ADFF7228255024A900E78549 /* HTTPErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF7227255024A900E78549 /* HTTPErrorTests.swift */; };
 		ADFF722E255025B700E78549 /* HTTPBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF722D255025B700E78549 /* HTTPBodyTests.swift */; };
+		ADFF7232255036C500E78549 /* HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF7231255036C500E78549 /* HTTPLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* Begin PBXFileReference section */
 		364B0DD793995C1448F3231E /* Pods-HTTPFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPFramework.release.xcconfig"; path = "Target Support Files/Pods-HTTPFramework/Pods-HTTPFramework.release.xcconfig"; sourceTree = "<group>"; };
 		4CC0531749716F549FCFA617 /* Pods-HTTPFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPFramework.debug.xcconfig"; path = "Target Support Files/Pods-HTTPFramework/Pods-HTTPFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1FAF2D25504AFD0007D814 /* HTTPLoadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoadingTests.swift; sourceTree = "<group>"; };
 		AD7F1A4E2545A7FC00FD12B0 /* HTTPFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7F1A512545A7FC00FD12B0 /* HTTPFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPFramework.h; sourceTree = "<group>"; };
 		AD7F1A522545A7FC00FD12B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		ADFF72232550237D00E78549 /* HTTPResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResultTests.swift; sourceTree = "<group>"; };
 		ADFF7227255024A900E78549 /* HTTPErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrorTests.swift; sourceTree = "<group>"; };
 		ADFF722D255025B700E78549 /* HTTPBodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBodyTests.swift; sourceTree = "<group>"; };
+		ADFF7231255036C500E78549 /* HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoading.swift; sourceTree = "<group>"; };
 		BF286CA8C5E32ACBCFFAF266 /* libPods-HTTPFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTTPFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,7 @@
 				AD7F1A7A2545ABD600FD12B0 /* HTTPResult.swift */,
 				AD7F1A7E2545AC2400FD12B0 /* HTTPError.swift */,
 				ADFF720D2550027E00E78549 /* HTTPBody.swift */,
+				ADFF7231255036C500E78549 /* HTTPLoading.swift */,
 			);
 			path = HTTPFramework;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				ADFF72232550237D00E78549 /* HTTPResultTests.swift */,
 				ADFF7227255024A900E78549 /* HTTPErrorTests.swift */,
 				ADFF722D255025B700E78549 /* HTTPBodyTests.swift */,
+				AD1FAF2D25504AFD0007D814 /* HTTPLoadingTests.swift */,
 			);
 			path = HTTPFrameworkTests;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			files = (
 				AD7F1A732545A9F400FD12B0 /* HTTPResponse.swift in Sources */,
 				AD7F1A7B2545ABD600FD12B0 /* HTTPResult.swift in Sources */,
+				ADFF7232255036C500E78549 /* HTTPLoading.swift in Sources */,
 				AD7F1A6B2545A84700FD12B0 /* HTTPMethod.swift in Sources */,
 				AD7F1A6F2545A88400FD12B0 /* HTTPRequest.swift in Sources */,
 				AD7F1A7F2545AC2400FD12B0 /* HTTPError.swift in Sources */,
@@ -318,6 +325,7 @@
 			files = (
 				ADFF721E25501F9100E78549 /* HTTPResponseTests.swift in Sources */,
 				ADFF722E255025B700E78549 /* HTTPBodyTests.swift in Sources */,
+				AD1FAF2E25504AFD0007D814 /* HTTPLoadingTests.swift in Sources */,
 				ADFF72122550180E00E78549 /* HTTPMethodTests.swift in Sources */,
 				ADFF721A25501A0900E78549 /* HTTPRequestTests.swift in Sources */,
 				ADFF72162550197A00E78549 /* HTTPStatusTests.swift in Sources */,

@@ -9,5 +9,5 @@ import XCTest
 @testable import HTTPFramework
 
 class HTTPResultTests: XCTestCase {
-    
+
 }

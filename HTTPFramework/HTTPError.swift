@@ -18,7 +18,8 @@ public struct HTTPError: Error {
     public let underlyingError: Error?
 
     public enum Code {
-        // A.S.: Add more
+        case badUrl
+        case canceled
         case unkown
     }
 }
