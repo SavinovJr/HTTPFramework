@@ -17,20 +17,27 @@ class HTTPLoadingTests: XCTestCase {
         request.host = "swapi.dev"
         request.path = "/api/people"
 
-        
-        _ = loader.load(request: request)
-            .receive(on: DispatchQueue.main)
+        let semaphore = semaphore_t()
+        var success = true
+        let publisher = loader.load(request: request)
+        let cancelable = publisher
             .sink { (result) in
-            switch result {
-            case .finished:
-                print("finished")
-            case .failure(let error):
-                print(error)
+                switch result {
+                case .finished:
+                    success = true
+                    semaphore_signal(semaphore)
+                case .failure(let error):
+                    print(error)
+                    success = false
+                    semaphore_signal(semaphore)
+                }
+            } receiveValue: { (response) in
+                XCTAssertNotNil(response)
+                success = true
             }
-        } receiveValue: { (response) in
-            XCTAssertNotNil(response)
-        }
-        
-        wait(for: [XCTestExpectation()], timeout: 60)
+
+        semaphore_wait(semaphore)
+        XCTAssertTrue(success)
+        cancelable.cancel()
     }
 }
