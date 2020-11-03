@@ -10,34 +10,49 @@ import Combine
 @testable import HTTPFramework
 
 class HTTPLoadingTests: XCTestCase {
-    func testMethod() throws {
-        let loader: HTTPLoading = URLSession.shared
+
+    func testMockLoadingSuccessfull() throws {
+        let mockLoader = MockLoader(fakeResult: .success)
 
         var request = HTTPRequest()
         request.host = "swapi.dev"
         request.path = "/api/people"
 
-        let semaphore = semaphore_t()
-        var success = true
-        let publisher = loader.load(request: request)
-        let cancelable = publisher
-            .sink { (result) in
-                switch result {
-                case .finished:
-                    success = true
-                    semaphore_signal(semaphore)
-                case .failure(let error):
-                    print(error)
-                    success = false
-                    semaphore_signal(semaphore)
-                }
-            } receiveValue: { (response) in
-                XCTAssertNotNil(response)
-                success = true
+        let publisher = mockLoader.load(request: request)
+        _ = publisher.sink { (result) in
+            switch result {
+            case .finished:
+                XCTAssert(true)
+            case .failure(let error):
+                XCTAssertNil(error)
             }
+        } receiveValue: { (response) in
+            XCTAssertNotNil(response)
+            XCTAssertEqual(response.request.host, "swapi.dev")
+            XCTAssertEqual(response.request.path, "/api/people")
+        }
+    }
 
-        semaphore_wait(semaphore)
-        XCTAssertTrue(success)
-        cancelable.cancel()
+    func testMockLoadingWithBadUrl() throws {
+        let mockLoader = MockLoader(fakeResult: .badUrl)
+
+        var request = HTTPRequest()
+        request.host = "swapi.dev"
+        request.path = "/api/people"
+    
+        let publisher = mockLoader.load(request: request)
+        _ = publisher.sink { (result) in
+            switch result {
+            case .finished:
+                XCTAssert(true)
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                XCTAssertTrue(error.code == .badUrl)
+            }
+        } receiveValue: { (response) in
+            XCTAssertNotNil(response)
+            XCTAssertEqual(response.request.host, "swapi.dev")
+            XCTAssertEqual(response.request.path, "/api/people")
+        }
     }
 }
