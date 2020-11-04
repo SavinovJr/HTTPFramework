@@ -39,7 +39,7 @@ class HTTPLoadingTests: XCTestCase {
         var request = HTTPRequest()
         request.host = "swapi.dev"
         request.path = "/api/people"
-    
+
         let publisher = mockLoader.load(request: request)
         _ = publisher.sink { (result) in
             switch result {
