@@ -40,7 +40,7 @@ public struct DataBody: HTTPBody {
         data.isEmpty
     }
 
-    init(data: Data, additionalHeaders: [String: String] = [:]) {
+    public init(data: Data, additionalHeaders: [String: String] = [:]) {
         self.data = data
         self.additionalHeaders = additionalHeaders
     }
@@ -63,7 +63,7 @@ public struct JSONBody<T: Encodable>: HTTPBody {
         "Content-Type": "application/json; charset=utf-8"
     ]
 
-    init(value: T) {
+    public init(value: T) {
         self.value = value
     }
 
@@ -83,7 +83,7 @@ public struct FormBody: HTTPBody {
         "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
     ]
 
-    init(queryItems: [URLQueryItem]) {
+    public init(queryItems: [URLQueryItem]) {
         self.queryItems = queryItems
     }
 
