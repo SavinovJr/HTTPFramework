@@ -2,7 +2,7 @@
 //  MockLoader.swift
 //  HTTPFramework
 //
-//  Created by Антон Савинов on 03.11.2020.
+//  Created by Anton Savinov on 03.11.2020.
 //
 
 import Foundation

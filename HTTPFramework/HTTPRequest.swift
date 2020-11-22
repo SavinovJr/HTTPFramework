@@ -2,7 +2,7 @@
 //  HTTPRequest.swift
 //  HTTPFramework
 //
-//  Created by Антон Савинов on 25.10.2020.
+//  Created by Anton Savinov on 25.10.2020.
 //
 
 import Foundation

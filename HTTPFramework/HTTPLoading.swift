@@ -2,7 +2,7 @@
 //  HTTPLoading.swift
 //  HTTPFramework
 //
-//  Created by Антон Савинов on 02.11.2020.
+//  Created by Anton Savinov on 02.11.2020.
 //
 
 import Combine
