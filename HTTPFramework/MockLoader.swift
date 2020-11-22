@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-public class MockLoader: HTTPLoading {
+class MockLoader: HTTPLoading {
 
     public enum FakeResult {
         case success
@@ -22,7 +22,7 @@ public class MockLoader: HTTPLoading {
         self.fakeResult = fakeResult
     }
 
-    public func load(request: HTTPRequest) -> AnyPublisher<HTTPResponse, HTTPError> {
+    func load(request: HTTPRequest) -> AnyPublisher<HTTPResponse, HTTPError> {
         guard let url = request.url else {
             fatalError("Can't fetch url from HTTPRequest")
         }

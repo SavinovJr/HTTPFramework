@@ -7,9 +7,9 @@
 
 import Foundation
 
-public typealias HTTPResult = Result<HTTPResponse, HTTPError>
+typealias HTTPResult = Result<HTTPResponse, HTTPError>
 
-public extension HTTPResult {
+extension HTTPResult {
 
     var request: HTTPRequest {
         switch self {

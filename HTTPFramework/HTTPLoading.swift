@@ -5,10 +5,15 @@
 //  Created by Антон Савинов on 02.11.2020.
 //
 
-import Foundation
 import Combine
 
+/// Describes `HTTP` loading protocol.
 public protocol HTTPLoading {
+    /// Describers `HTTP` load command.
+    ///
+    /// - Parameter request: The `HTTP` request to be performed.
+    /// - Returns: The instance of `AnyPublisher` object that will contain the future result of `HTTP` request
+    /// as `HTTPResponse` and `HTTPError`
     func load(request: HTTPRequest) -> AnyPublisher<HTTPResponse, HTTPError>
 }
 
