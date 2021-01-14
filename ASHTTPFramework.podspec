@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ASHTTPFramework"
-  spec.version      = "0.1"
+  spec.version      = "0.2"
   spec.summary      = "HTTPFramework based on Combine"
 
   # This description is used to generate tags and improve search results.
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/SavinovJr/HTTPFramework.git", :tag => "0.1" }
+  spec.source       = { :git => "https://github.com/SavinovJr/HTTPFramework.git", :tag => #{spec.version} }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,7 +88,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "HTTPFramework"
+  spec.source_files  = "HTTPFramework/*"
   spec.swift_version = "5.3" 
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -116,6 +116,8 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
+
+  spec.dependency 'SwiftLint', '~> 0.42.0'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
