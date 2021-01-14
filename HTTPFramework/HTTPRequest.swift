@@ -55,6 +55,15 @@ public extension HTTPRequest {
             urlComponents.path = newValue
         }
     }
+    /// Represents query components of request message
+    var queryItems: [URLQueryItem]? {
+        get {
+            urlComponents.queryItems
+        }
+        set {
+            urlComponents.queryItems = newValue
+        }
+    }
     /// Provides `URL` of request message
     var url: URL? {
         urlComponents.url

@@ -32,4 +32,17 @@ class HTTPRequestTests: XCTestCase {
         XCTAssertEqual(request.host, "google.com")
         XCTAssertEqual(request.path, "/images")
     }
+
+    func testHTTPRequestShouldBeInitializedWithQueryComponents() throws {
+        var request = HTTPRequest()
+        request.host = "google.com"
+        request.path = "/images"
+        request.queryItems = [URLQueryItem(name: "add", value: "1")]
+        XCTAssertEqual(request.host, "google.com")
+        XCTAssertEqual(request.path, "/images")
+        XCTAssertNotNil(request.queryItems)
+        XCTAssertEqual(request.queryItems?[0].name, "add")
+        XCTAssertEqual(request.queryItems?[0].value, "1")
+        XCTAssertEqual(request.url?.description, "https://google.com/images?add=1")
+    }
 }
