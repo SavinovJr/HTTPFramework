@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name          = 'ASHTTPFramework'
-  spec.version       = '0.2'
+  spec.version       = '0.3'
   spec.summary       = 'HTTPFramework based on Combine'
   spec.description   = 'ASHTTPFramework is HTTP framework that provides great functionality to interact with HTTP protocol using Apple Combine framework'
   spec.homepage      = 'https://github.com/SavinovJr/HTTPFramework'
@@ -21,6 +21,6 @@ Pod::Spec.new do |spec|
                          :tag => spec.version.to_s }
   spec.source_files  = 'HTTPFramework/**/*.{swift}'
   spec.swift_version = '5.3' 
-  spec.dependency      'SwiftLint', '~> 0.42.0'
+  spec.dependency      'SwiftLint'
 
 end
